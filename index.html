@@ -19,15 +19,31 @@
         <input type="number" id="square" placeholder="Need digits"> <br>
         <br>
         <button type="submit">square</button>
-
+        <div id="result">result</div>
+    </form>
+   
+   
+    <form onsubmit="sqrt() ; return false">
+        <input type="number" id="sqrt" placeholder="Need digits"> <br>
+        <br>
+        <button type="submit">square root</button>
         <div id="result">result</div>
     </form>
 
     <script>
+        let sqrt = () =>{
+        let input= +document.querySelector("#sqrt").value;
+        
+        let result = math.sqrt (input);
+
+        document.querySelector("#result").innerHTML = result;
+    }
+
+    
+   
         let sqr = () => {
             let input = +document.querySelector("#square").value;
-
-
+              
             let result = math.square(input);
             document.querySelector("#result").innerHTML = result;
 
